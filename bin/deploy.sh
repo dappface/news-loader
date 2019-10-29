@@ -5,12 +5,8 @@ set -o xtrace
 
 if [ "$GITHUB_EVENT_NAME" = "release" ] ; then
   export PROJECT_ID=dappface-prd-v2
-elif [ "$GITHUB_EVENT_NAME" = "push" ] ; then
-  if [ $(basename  "$GITHUB_REF") = 'master' ] ; then
-    export PROJECT_ID=dappface-stg-v2
-  else
-    export PROJECT_ID=dappface-dev
-  fi
+elif [ "$GITHUB_EVENT_NAME" = "push" ] || [ $(basename  "$GITHUB_REF") = 'master' ] ; then
+  export PROJECT_ID=dappface-stg-v2
 else
 	export PROJECT_ID=dappface-dev
 fi
