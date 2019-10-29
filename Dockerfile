@@ -15,4 +15,4 @@ COPY --from=builder /workspace/app /app
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 ENV PORT 8080
 
-ENTRYPOINT ["/bin/berglas", "exec", "--", "./app"]
+ENTRYPOINT ["/app"]

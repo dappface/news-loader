@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	cloud.google.com/go/firestore v1.0.0
+	github.com/GoogleCloudPlatform/berglas v0.2.1
 	github.com/PuerkitoBio/goquery v1.5.0 // indirect
 	github.com/antchfx/htmlquery v1.1.0 // indirect
 	github.com/antchfx/xmlquery v1.1.0 // indirect
