@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"github.com/dappface/news-loader/registry"
-	_ "github.com/GoogleCloudPlatform/berglas/pkg/auto"
 )
 
 var h http.Handler

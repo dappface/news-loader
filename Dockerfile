@@ -11,8 +11,9 @@ RUN apk --update --no-cache add ca-certificates && \
   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -a -installsuffix cgo -o app .
 
 FROM scratch
+COPY --from=gcr.io/berglas/berglas:latest /bin/berglas /bin/berglas
 COPY --from=builder /workspace/app /app
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 ENV PORT 8080
 
-ENTRYPOINT ["/app"]
+ENTRYPOINT ["/bin/berglas", "exec", "--", "./app"]
