@@ -22,7 +22,7 @@ PROJECT_ID=dappface-dev \
   TWITTER_ACCESS_TOKEN_SECRET=<access-toekn-secret> \
   TWITTER_API_KEY=<api-key> \
   TWITTER_API_SECRET=<api-secret> \
-  go run . <rss | twitter>
+  go run .
 ```
 
 ## Start Docker Container
@@ -38,5 +38,5 @@ docker run --rm \
   -e TWITTER_ACCESS_TOKEN_SECRET=<access-toekn-secret> \
   -e TWITTER_API_KEY=<api-key> \
   -e TWITTER_API_SECRET=<api-secret> \
-  app <rss | twitter>
+  news-loader
 ```
