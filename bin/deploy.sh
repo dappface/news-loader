@@ -27,4 +27,10 @@ gcloud beta run deploy "$APP_NAME" \
 	--platform managed \
 	--allow-unauthenticated \
 	--region us-east1 \
-	--set-env-vars "PROJECT_ID=${PROJECT_ID},TWITTER_ACCESS_TOKEN=${BERGLAS_PATH}/twitter-access-token,TWITTER_ACCESS_TOKEN_SECRET=${BERGLAS_PATH}/twitter-access-token-secret,TWITTER_API_KEY=${BERGLAS_PATH}/twitter-api-key,TWITTER_API_SECRET=${BERGLAS_PATH}/twitter-api-secret"
+	--set-env-vars "\
+PROJECT_ID=${PROJECT_ID},
+TWITTER_ACCESS_TOKEN=${BERGLAS_PATH}/twitter-access-token,
+TWITTER_ACCESS_TOKEN_SECRET=${BERGLAS_PATH}/twitter-access-token-secret,
+TWITTER_API_KEY=${BERGLAS_PATH}/twitter-api-key,
+TWITTER_API_SECRET=${BERGLAS_PATH}/twitter-api-secret\
+"
